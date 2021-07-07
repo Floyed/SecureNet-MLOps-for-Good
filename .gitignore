@@ -1,0 +1,5 @@
+pipe/
+.ipynb_checkpoints/
+conf/__pycache__/
+trainModel.ipynb
+raw_data.csv

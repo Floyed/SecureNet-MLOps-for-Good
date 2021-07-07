@@ -1,0 +1,69 @@
+kind: project
+metadata:
+  name: securenet-floyed
+spec:
+  functions:
+  - name: train-data
+    spec:
+      kind: job
+      metadata:
+        name: train-data
+        tag: latest
+        hash: 0c2ffcee3373c9b07757888ed399b8804ec5e91b
+        project: securenet-floyed
+        categories: []
+        updated: '2021-07-06T22:41:24.172655+00:00'
+      spec:
+        command: ''
+        args: []
+        image: mlrun/mlrun
+        env:
+        - name: V3IO_API
+          value: ''
+        - name: V3IO_USERNAME
+          value: ''
+        - name: V3IO_ACCESS_KEY
+          value: ''
+        default_handler: ''
+        entry_points:
+          train_data:
+            name: train_data
+            doc: ''
+            parameters:
+            - name: context
+              default: ''
+            - name: dataset
+              type: DataItem
+              default: ''
+            - name: label_column
+              type: str
+              default: label
+            outputs:
+            - default: ''
+            lineno: 14
+        description: ''
+        build:
+          functionSourceCode: IyBHZW5lcmF0ZWQgYnkgbnVjbGlvLmV4cG9ydC5OdWNsaW9FeHBvcnRlcgoKZnJvbSBza2xlYXJuIGltcG9ydCBwcmVwcm9jZXNzaW5nCmZyb20gb3MgaW1wb3J0IHBhdGgKaW1wb3J0IG51bXB5IGFzIG5wIAppbXBvcnQgcGFuZGFzIGFzIHBkCmltcG9ydCBkYXRldGltZSBhcyBkdApmcm9tIHNrbGVhcm4ubW9kZWxfc2VsZWN0aW9uIGltcG9ydCB0cmFpbl90ZXN0X3NwbGl0CmZyb20gbWxydW4uZXhlY3V0aW9uIGltcG9ydCBNTENsaWVudEN0eApmcm9tIHBpY2tsZSBpbXBvcnQgZHVtcHMKZnJvbSBza2xlYXJuLmxpbmVhcl9tb2RlbCBpbXBvcnQgTG9naXN0aWNSZWdyZXNzaW9uCmltcG9ydCBtbHJ1bgoKZGVmIHRyYWluX2RhdGEoY29udGV4dCwKICAgICAgICAgICAgICAgZGF0YXNldDptbHJ1bi5EYXRhSXRlbSwKICAgICAgICAgICAgICAgbGFiZWxfY29sdW1uOiBzdHIgPSAibGFiZWwiKToKICAgIAogICAgdHJhaW5fZGYgPSBkYXRhc2V0LmFzX2RmKCkKICAgIHkgPSB0cmFpbl9kZltsYWJlbF9jb2x1bW5dCiAgIAogICAgdHJhaW5fZGYgPSB0cmFpbl9kZi5kcm9wKGNvbHVtbnM9W2xhYmVsX2NvbHVtbl0pCiAgICB0cmFpbl9kZiA9IHRyYWluX2RmLmRyb3AodHJhaW5fZGYuY29sdW1uc1tbMF1dLCBheGlzPTEpCiAgICAKICAgIFhfdHJhaW4sWF90ZXN0LHlfdHJhaW4seV90ZXN0ID0gdHJhaW5fdGVzdF9zcGxpdCh0cmFpbl9kZix5LHJhbmRvbV9zdGF0ZT0xMjMsdGVzdF9zaXplPTAuMTApCiAgICBtb2RlbCA9IExvZ2lzdGljUmVncmVzc2lvbihtYXhfaXRlcj0xMDAwMCkKICAgIG1vZGVsLmZpdChYX3RyYWluLCB5X3RyYWluKQogICAgICAgICAgICAgICAgICAgCiAgICBjb250ZXh0LmxvZ19kYXRhc2V0KCd0cmFpbl9zZXQnLCAKICAgICAgICAgICAgICAgICAgICAgICAgZGY9cGQuY29uY2F0KFtYX3RyYWluLCB5X3RyYWluLnRvX2ZyYW1lKCldLCBheGlzPTEpLAogICAgICAgICAgICAgICAgICAgICAgICBmb3JtYXQ9J2NzdicsIGluZGV4PUZhbHNlLCAKICAgICAgICAgICAgICAgICAgICAgICApCiAgICAgICAgICAgICAgICAgICAgICAgCgogICAgY29udGV4dC5sb2dfZGF0YXNldCgndGVzdF9zZXQnLCAKICAgICAgICAgICAgICAgICAgICAgICAgZGY9cGQuY29uY2F0KFtYX3Rlc3QsIHlfdGVzdC50b19mcmFtZSgpXSwgYXhpcz0xKSwKICAgICAgICAgICAgICAgICAgICAgICAgZm9ybWF0PSdjc3YnLCBpbmRleD1GYWxzZSwgCiAgICAgICAgICAgICAgICAgICAgICAgIGxhYmVscz17ImRhdGEtdHlwZSI6ICJoZWxkLW91dCJ9LAogICAgICAgICAgICAgICAgICAgICAgICkKICAgIGNvbnRleHQubG9nX21vZGVsKCdtb2RlbCcsCiAgICAgICAgICAgICAgICAgICAgIGJvZHk9ZHVtcHMobW9kZWwpLAogICAgICAgICAgICAgICAgICAgICBtb2RlbF9maWxlPSJtb2RlbC5wa2wiLAogICAgICAgICAgICAgICAgICAgIG1ldHJpY3M9Y29udGV4dC5yZXN1bHRzLAogICAgICAgICAgICAgICAgICAgIGxhYmVscz17ImNsYXNzIjogInNrbGVhcm4ubGluZWFyX21vZGVsLkxvZ2lzdGljUmVncmVzc2lvbiJ9KQogICAgCiAgICBjb250ZXh0LmxvZ2dlci5pbmZvKCdFbmQgdHJhaW5pbmcnKQoK
+          commands: []
+          code_origin: https://github.com/Floyed/SecureNet-MLOps-for-Good.git#db4983844a375cd9888d52bf33da724c0daddbb1:train_data.ipynb
+        affinity: null
+      verbose: false
+  - url: db://securenet-floyed/data-clean
+    name: data-clean
+  - url: db://securenet-floyed/describe
+    name: describe
+  - url: hub://v2_model_tester
+    name: live_tester
+  - url: db://securenet-floyed/serving
+    name: serving
+  - url: hub://test_classifier
+    name: test
+  workflows:
+  - name: infer
+    path: workflow.py
+  artifacts: []
+  artifact_path: v3io:///projects/{{run.project}}/artifacts
+  source: ''
+  subpath: ''
+  origin_url: ''
+  desired_state: online
